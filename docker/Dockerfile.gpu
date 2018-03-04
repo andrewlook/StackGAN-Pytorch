@@ -44,7 +44,20 @@ RUN ~/anaconda/bin/conda install -c anaconda tensorflow-tensorboard
 RUN ~/anaconda/bin/conda install easydict -c auto 
 RUN ~/anaconda/bin/conda install pytorch torchvision cuda80 -c soumith
 RUN ~/anaconda/bin/conda install pip
-RUN pip install torchfile 
+RUN pip install torchfile tensorboard 
+
+RUN apt-get install -y --no-install-recommends git
+
+#RUN git clone https://github.com/torch/distro.git ~/torch --recursive && \
+#    cd ~/torch && \
+#    bash install-deps && \
+#    ./install.sh
+#
+#RUN luarocks install display
+#
+
+
+
 
 
 # Set up our notebook config.
